@@ -1,9 +1,4 @@
 from colorama import Fore
-from cv2 import cv2
-
-heroe_clicks = 0
-last_log_is_progress = False
-new_map_btn_img = cv2.imread('./targets/new-map.png')
 
 COLOR = {
     'blue': Fore.BLUE,
@@ -21,13 +16,10 @@ COLOR = {
 
 class Log:
     def importLibs(self):
-        from src.actions import Actions
         from src.config import Config
         from src.date import Date
-        self.actions = Actions()
         self.config = Config().read()
         self.date = Date()
-        self.log = Log()
 
     def console(self, message, emoji=False, color='default'):
         self.importLibs()

@@ -6,12 +6,10 @@ import time
 
 class Recognition:
     def importLibs(self):
-        from src.actions import Actions
         from src.config import Config
         from src.desktop import Desktop
         from src.images import Images
         from src.recognition import Recognition
-        self.actions = Actions()
         self.config = Config().read()
         self.desktop = Desktop()
         self.images = Images()
