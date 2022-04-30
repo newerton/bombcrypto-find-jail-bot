@@ -10,10 +10,12 @@ class Recognition:
         from src.config import Config
         from src.desktop import Desktop
         from src.images import Images
+        from src.recognition import Recognition
         self.actions = Actions()
         self.config = Config().read()
         self.desktop = Desktop()
         self.images = Images()
+        self.recognition = Recognition()
 
     def positions(self, target, threshold=None, baseImage=None, returnArray=False):
         self.importLibs()
